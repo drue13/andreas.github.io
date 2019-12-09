@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "dark1", // "light1", "light2", "dark1", "dark2"
+	animationEnabled: true,
+	title:{
+		text: "NBA Betting P&L 2018-2019"
+	},
+	axisX: {
+    title: "Time",
+		interval: 1,
+		intervalType: "month",
+		valueFormatString: "MMM"
+	},
+	axisY:{
+		title: "Capital (USD)",
+		valueFormatString: "$#0"
+	},
+	data: [{
+		type: "area",
+		markerSize: 12,
+		xValueFormatString: "MMM, YYYY",
+		yValueFormatString: "$#####.##",
+		dataPoints: [
+			{ x: new Date(2018, 10, 1), y: 2000, indexLabel: "initial investment", markerType: "circle",  markerColor: "dimgray" },
+			{ x: new Date(2018, 10, 19), y: 1418.49, indexLabel: "loss", markerType: "cross",  markerColor: "tomato" },
+			{ x: new Date(2018, 10, 26) , y: 3206.84, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2018, 11, 3) , y: 3739.56, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2018, 11, 10) , y: 4665.05, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2018, 11, 17) , y: 5156.51, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2018, 11, 24) , y: 4445.88, indexLabel: "loss", markerType: "cross", markerColor: "tomato" },
+			{ x: new Date(2018, 11, 31) , y: 4992.55, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2019, 00, 7) , y: 5890.77, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2019, 00, 14) , y: 6501.15, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2019, 00, 21) , y: 6952.51, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+			{ x: new Date(2019, 00, 28) , y: 8503.39, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 01, 04) , y: 9413.27, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 01, 11) , y: 9797.74, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 01, 15) , y: 9444.13, indexLabel: "loss", markerType: "cross", markerColor: "tomato" },
+      { x: new Date(2019, 01, 25) , y: 9694.78, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 02, 4) , y: 9590.45, indexLabel: "loss", markerType: "cross", markerColor: "tomato" },
+      { x: new Date(2019, 02, 11) , y: 9840.19, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 02, 18) , y: 10958.75, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 02, 25) , y: 10481.87, indexLabel: "loss", markerType: "cross", markerColor: "tomato" },
+      { x: new Date(2019, 03, 1) , y: 10539.83, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 03, 8) , y: 10637.85, indexLabel: "gain", markerType: "triangle", markerColor: "springgreen" },
+      { x: new Date(2019, 03, 11) , y: 10917.41, indexLabel: "", markerType: "triangle", markerColor: "springgreen" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>
